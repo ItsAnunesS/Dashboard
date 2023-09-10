@@ -1,0 +1,33 @@
+{
+  "name": "dashboard-anuness-dev",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@dargmuesli/nuxt-cookie-control": "^6.4.2",
+    "@nuxt/devtools": "latest",
+    "@nuxt/test-utils": "^3.7.1",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "daisyui": "^3.7.3",
+    "flowbite": "^1.8.1",
+    "nuxt": "^3.7.1",
+    "nuxt-link-checker": "^2.1.8",
+    "nuxt-og-image": "^2.0.25",
+    "nuxt-schema-org": "^3.0.0-beta.1",
+    "nuxt-simple-robots": "^3.1.2",
+    "nuxt-simple-sitemap": "^3.2.7",
+    "nuxt-site-config": "^1.1.0",
+    "nuxt-site-config-kit": "^1.1.0",
+    "vitest": "^0.34.4"
+  },
+  "dependencies": {
+    "@nuxtjs/device": "^3.1.0",
+    "@nuxtjs/i18n": "^8.0.0-rc.4"
+  }
+}
