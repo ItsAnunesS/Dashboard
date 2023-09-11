@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useSchemaOrg([
   defineWebSite({
     name: 'AnunesS',
@@ -28,11 +28,11 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
-const title = computed(() => t('layouts.title', { title: t(route.meta.title ?? 'TBD') }))
+const title = computed(() => t('layouts.title', { title: t('oi') }))
 </script>
 
 <template>
-  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+  <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
     <Head>
       <Title>{{ title }}</Title>
       <template v-for="link in head.link" :key="link.id">

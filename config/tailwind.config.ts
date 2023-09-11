@@ -1,21 +1,17 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
-  content: [
-    "~/node_modules/flowbite/**/*.js"
-  ],
+  darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
-    require('flowbite/plugin'),
     require('daisyui'),
   ],
   daisyui: {
-    themes: false,
+    themes: true,
     darkTheme: "dark",
-    base: false,
+    base: true,
     styled: true,
     utils: true,
-    rtl: false,
     prefix: "daisyui-",
     logs: true,
   },

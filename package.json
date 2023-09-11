@@ -15,7 +15,6 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^3.7.3",
-    "flowbite": "^1.8.1",
     "nuxt": "^3.7.1",
     "nuxt-link-checker": "^2.1.8",
     "nuxt-og-image": "^2.0.25",
@@ -28,6 +27,8 @@
   },
   "dependencies": {
     "@nuxtjs/device": "^3.1.0",
-    "@nuxtjs/i18n": "^8.0.0-rc.4"
+    "@nuxtjs/i18n": "^8.0.0-rc.4",
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.6"
   }
 }

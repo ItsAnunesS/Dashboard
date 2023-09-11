@@ -1,4 +1,17 @@
 export default defineNuxtConfig({
+  ssr: false,
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
+  typescript: {
+    strict: true,
+    tsConfig: {
+      "include": ["types/*.d.ts", "types/**/*.d.ts", "types/**/**/*.d.ts"]
+    }
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -9,10 +22,10 @@ export default defineNuxtConfig({
     'nuxt-link-checker',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
+    '@pinia/nuxt',
   ],
   cookieControl: {
     barPosition: 'bottom-full',
-    closeModalOnClickOutside: true,
   },
   site: {
     url: 'https://anuness.dev/',
@@ -33,7 +46,6 @@ export default defineNuxtConfig({
     sitemaps: true,
     autoI18n: true,
     autoLastmod: false,
-    hostname: 'https://anuness.dev',
     sitemapName: 'sitemap.xml',
   },
   i18n: {
@@ -60,5 +72,11 @@ export default defineNuxtConfig({
         file: 'pt-BR.ts',
       },
     ],
+    experimental: {
+      jsTsFormatResource: true
+    }
+  },
+  nitro: {
+    preset: 'static',
   }
 })
