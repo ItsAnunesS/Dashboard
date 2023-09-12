@@ -3,6 +3,8 @@ import type { UseFetchOptions } from "nuxt/app";
 export function useApiFetch<T>(path: string, options: UseFetchOptions<T> = {}) {
   let headers: any = {};
 
+  const runtimeConfig = useRuntimeConfig()
+  const backend_url = runtimeConfig.public.BACKEND_URL;
   const token = useCookie("XSRF-TOKEN");
 
   if (path.startsWith("/")) {
@@ -14,7 +16,7 @@ export function useApiFetch<T>(path: string, options: UseFetchOptions<T> = {}) {
   }
 
   console.log('useApiFetch', path, options, headers)
-  return useFetch("http://localhost:8000/" + path, {
+  return useFetch(backend_url + path, {
     lazy: true,
     server: false,
     credentials: "include",

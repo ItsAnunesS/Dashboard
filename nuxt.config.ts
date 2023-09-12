@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      BACKEND_URL: process.env.BACKEND_URL ?? "https://api.anuness.dev/"
+    }
+  },
   ssr: false,
   app: {
     head: {
