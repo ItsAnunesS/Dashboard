@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  middleware: 'auth',
+  middleware: ['auth'],
   title: 'pages.title.top' // set resource key
 })
 

@@ -3,7 +3,7 @@ import { useAuthStore } from '~/stores/useAuthStore';
 
 definePageMeta({
   layout: "blank",
-  middleware: "guest",
+  middleware: ["guest"],
 });
 
 const form: Ref<CredentialsType> = ref({
@@ -17,14 +17,22 @@ const success = ref('');
 const authStore = useAuthStore();
 
 async function handleLogin() {
-  const {pending, data, error, execute, refresh} = await authStore.login(form.value);
+  if (isLoading.value) {
+    return;
+  }
+
+  if (authStore.isLoggedIn) {
+    return navigateTo("/");
+  }
+
+  const {pending, error} = await authStore.login(form.value);
 
   isLoading.value = pending.value;
 
-  if (error.value) {
-    return error.value;
+  if (!error.value && !pending.value) {
+    success.value = "Login successful";
+    return navigateTo("/");
   }
-  navigateTo("/");
 }
 </script>
 
