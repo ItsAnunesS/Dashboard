@@ -1,4 +1,6 @@
-<script setup>
+<script setup lang="ts">
+const localePath = useLocalePath();
+const { isLoading } = useSiteState();
 </script>
 
 <template>
@@ -14,12 +16,13 @@
       </div>
       <div class="daisyui-drawer-side">
         <label for="dashboard-drawer" class="daisyui-drawer-overlay"></label>
-        <ul class="daisyui-menu p-4 w-2/3 md:w-80 min-h-full bg-base-200 text-base-content">
-          <!-- Sidebar content here -->
-          <li><a>Sidebar Item 1</a></li>
-          <li><a>Sidebar Item 2</a></li>
+        <ul class="daisyui-menu p-4 w-2/3 md:w-72 min-h-full bg-base-200 text-base-content">
+          <li v-for="page in usePages().pages.value">
+            <NuxtLink :to="localePath({ name: page.id })">
+              {{ page.title }}
+            </NuxtLink>
+          </li>
         </ul>
-
       </div>
     </div>
   </div>

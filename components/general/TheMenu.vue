@@ -1,7 +1,10 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <nav class="daisyui-navbar bg-base-100">
     <div class="flex-none">
-      <label for="dashboard-drawer" class="md:hidden daisyui-btn daisyui-btn-square daisyui-btn-ghost daisyui-swap daisyui-swap-rotate">
+      <label for="dashboard-drawer" class="lg:hidden daisyui-btn daisyui-btn-square daisyui-btn-ghost daisyui-swap daisyui-swap-rotate">
 
         <input type="checkbox" />
 

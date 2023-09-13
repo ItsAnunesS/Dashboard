@@ -4,6 +4,7 @@ import { useAuthStore } from '~/stores/useAuthStore';
 definePageMeta({
   layout: "blank",
   middleware: ["guest"],
+  title: 'pages.login.title'
 });
 
 const form: Ref<CredentialsType> = ref({

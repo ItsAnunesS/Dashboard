@@ -1,5 +1,3 @@
-export { UserType };
-
 declare global {
   type UserType = {
     id: number;
@@ -10,4 +8,11 @@ declare global {
     email: string;
     password: string;
   };
+  interface PageInterface {
+    id: string
+    url: string
+    title: string
+  }
 }
+
+export { UserType, CredentialsType, PageInterface };

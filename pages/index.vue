@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
   middleware: ['auth'],
-  title: 'pages.title.top' // set resource key
+  title: 'pages.index.title'
 })
 
 const { locale, locales, t } = useI18n()

@@ -19,7 +19,6 @@ const getCookieLocale = () => {
   }
 }
 
-const route = useRoute()
 const { t } = useI18n()
 
 const head = useLocaleHead({
@@ -28,7 +27,7 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
-const title = computed(() => t('layouts.title', { title: t('oi') }))
+const title = computed(() => t('system.title'))
 </script>
 
 <template>

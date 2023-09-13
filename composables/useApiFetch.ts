@@ -17,7 +17,6 @@ export function useApiFetch<T>(path: string, options: UseFetchOptions<T> = {}) {
     headers["X-XSRF-TOKEN"] = token.value as string;
   }
 
-  console.log('useApiFetch', path, options, headers)
   return useFetch(config.public.API_URL + path, {
     lazy: true,
     server: false,
