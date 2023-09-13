@@ -1,14 +1,12 @@
-<script setup>
+<script setup lang="ts">
 definePageMeta({
   middleware: ['auth'],
-  title: 'pages.index.title'
+  title: 'pages.profile.settings.title'
 })
 </script>
 
 <template>
   <div>
-    <h1>
-      oi
-    </h1>
+    ola
   </div>
 </template>

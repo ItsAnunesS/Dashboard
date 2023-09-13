@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { useAuthStore } from '~/stores/useAuthStore';
+
+const authStore = useAuthStore();
+
+function logout() {
+  authStore.logout();
+}
 </script>
 
 <template>
@@ -26,13 +33,21 @@
         </label>
         <ul tabindex="0" class="daisyui-menu daisyui-menu-sm daisyui-dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li>
-            <a class="justify-between">
+            <NuxtLinkLocale to="profile" class="justify-between">
               Profile
               <span class="daisyui-badge">New</span>
+            </NuxtLinkLocale>
+          </li>
+          <li>
+            <NuxtLinkLocale to="profile-settings">
+              Settings
+            </NuxtLinkLocale>
+          </li>
+          <li>
+            <a @click.prevent="logout">
+              Logout
             </a>
           </li>
-          <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
         </ul>
       </div>
     </div>

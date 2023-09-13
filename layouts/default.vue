@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const localePath = useLocalePath();
-const { isLoading } = useSiteState();
 </script>
 
 <template>
@@ -18,9 +16,9 @@ const { isLoading } = useSiteState();
         <label for="dashboard-drawer" class="daisyui-drawer-overlay"></label>
         <ul class="daisyui-menu p-4 w-2/3 md:w-72 min-h-full bg-base-200 text-base-content">
           <li v-for="page in usePages().pages.value">
-            <NuxtLink :to="localePath({ name: page.id })">
+            <NuxtLinkLocale :to="page.id">
               {{ page.title }}
-            </NuxtLink>
+            </NuxtLinkLocale>
           </li>
         </ul>
       </div>
