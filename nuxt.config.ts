@@ -70,12 +70,12 @@ export default defineNuxtConfig({
       {
         code: 'en',
         iso: 'en-US',
-        file: 'en-US.ts',
+        file: 'en.json',
       },
       {
         code: 'pt',
         iso: 'pt-BR',
-        file: 'pt-BR.ts',
+        file: 'pt.json',
       },
     ],
     experimental: {

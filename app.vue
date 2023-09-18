@@ -27,7 +27,7 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
-const title = computed(() => t('system.title'))
+const title = computed(() => t('system.title'));
 </script>
 
 <template>
@@ -42,6 +42,7 @@ const title = computed(() => t('system.title'))
       </template>
     </Head>
     <Body>
+      <GeneralTheWarning />
       <NuxtLayout>
         <CookieControl :locale="getCookieLocale()" />
         <NuxtPage />
